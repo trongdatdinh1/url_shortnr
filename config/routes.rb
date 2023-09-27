@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1, defaults: { format: :json } do
       get :status, to: 'api#status'
+      post :shorten, to: 'shorten#create'
 
       devise_scope :user do
         resource :user, only: %i[update show]
@@ -26,4 +27,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  get '/*short', to: 'redirect#show'
 end
