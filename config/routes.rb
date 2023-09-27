@@ -28,5 +28,6 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/', to: 'homepage#index', as: :root
   get '/*short', to: 'redirect#show'
 end

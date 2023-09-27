@@ -16,6 +16,6 @@
 #
 
 class Url < ApplicationRecord
-  validates :original, presence: true
+  validates :original, presence: true, url: true
   validates :short, uniqueness: true, presence: true
 end

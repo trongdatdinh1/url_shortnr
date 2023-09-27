@@ -5,7 +5,7 @@ class RedirectController < ApplicationController
 
   def show
     url = Url.find_by short: params[:short]
-    to_path = url.blank? ? '/' : url.original
+    to_path = url.blank? ? root_path : url.original
     redirect_to(to_path, allow_other_host: true)
   end
 end
