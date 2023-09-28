@@ -8,6 +8,7 @@
 1. Open url_shortnr-web-1 bash `docker exec -it url_shortnr-web-1 bash`
   - `rails db:create` create the database
   - `rails db:migrate` run db migrations
+  - `rails db:seed` db seeding
 
 # APIs manual
 
